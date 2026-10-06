@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #243447;
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: #3d5a73;
+}
+
+.nav-links a.active {
+  background-color: #3d5a73;
+}
+
+.nav-links button {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-links button:hover {
+  background-color: #a93226;
+}
+
+/* MAIN PAGE */
+
+.page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.page h1 {
+  margin-bottom: 5px;
+}
+
+.page h2 {
+  margin-top: 30px;
+}
+
+/* DASHBOARD */
+
+.dashboard-top {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.dashboard-top input {
+  flex: 1;
+}
+
+.total-box {
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #ddd;
+  text-align: center;
+  min-width: 180px;
+}
+
+.total-box h3 {
+  margin: 0 0 8px;
+}
+
+.total-box strong {
+  font-size: 30px;
+}
+
+/* FORMS */
+
+.book-form,
+.transaction-form,
+.user-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 25px 0;
+  box-shadow: 0 2px 8px #ddd;
+}
+
+.book-form h2,
+.transaction-form h2,
+.user-form h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: white;
+}
+
+/* BUTTONS */
+
+.primary-button,
+.secondary-button,
+.edit-button,
+.delete-button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.primary-button {
+  background-color: #2874a6;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #1f618d;
+}
+
+.secondary-button {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+.secondary-button:hover {
+  background-color: #626567;
+}
+
+.edit-button {
+  background-color: #f39c12;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #d68910;
+}
+
+.delete-button {
+  background-color: #c0392b;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #a93226;
+}
+
+/* TABLE */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px #ddd;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #e9eef2;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f8f9f9;
+}
+
+/* BOOK STATUS */
+
+.low-stock {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.available {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  background-color: #243447;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px #111;
+}
+
+.login-box h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.login-box > p {
+  text-align: center;
+  color: #666;
+}
+
+.login-box label {
+  text-align: left;
+}
+
+.login-box button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.login-help {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+.error {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .dashboard-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .total-box {
+    width: 100%;
+  }
+
+  .page {
+    width: 94%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 9px;
+  }
+}
